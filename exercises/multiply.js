@@ -10,28 +10,36 @@
 
 // Your code :
 
-function multiply (x, y){
+function multiply(arg1, arg2){
 	let resultat = 0;
-	if (x === 0 || y === 0)
+	if (arg1 === 0 || arg2 === 0)
 		return 0;
-	
-	if ((y > 0 && x > 0) || (y < 0 && x < 0)){
-		y = Math.abs(y);
-		x = Math.abs(x);
-		for (let i = 0; i < y; i++){
-			resultat += x;
+
+	if ((arg1 > 0 && arg2 > 0) || (arg1 < 0 && arg2 < 0)){
+		arg1 = Math.abs(arg1);
+		arg2 = Math.abs(arg2);
+		for(let i = 0; i < arg1; i++){
+		resultat += arg2;
 		}
 		return resultat;
-	} else{
-		if ((y > 0 && x < 0) || (y < 0 && x > 0)){
-			y = Math.abs(y);
-			x = Math.abs(x);
-			for (let i = 0; i < y; i++) {
-				resultat += x;
-			} return -resultat;
+	} else {
+		if (arg1 < 0){
+			arg1 = Math.abs(arg1);
+			for(let i = 0; i < arg1; i++){
+			resultat += arg2;
+			}
+			return -resultat;
+		} else {
+			arg2 = Math.abs(arg2);
+			for(let i = 0; i < arg1; i++){
+			resultat += arg2;
+			}
+			return -resultat;
 		}
+
 	}
-}
+
+} 
 
 //* Begin of tests
 const assert = require('assert')
