@@ -7,6 +7,10 @@
  *
  */
 
+ function capitalize(text){
+ 	capitalize_Words(text)
+ }
+
 
 //* Begin of tests
 const assert = require('assert')
