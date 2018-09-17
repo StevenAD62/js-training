@@ -10,10 +10,22 @@
  *
  */
 
+function jadenCase (input) {
+    let words = input.split(' ');
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].substr(1).toLowerCase();
+    } return words.join(' ');
+}
+
 
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(typeof jadenCase, 'function')
+assert.strictEqual(jadenCase.length, 1)
+assert.strictEqual(jadenCase('salut toi'), 'Salut Toi')
+assert.strictEqual(jadenCase('s'), 'S')
+assert.strictEqual(jadenCase('comment vas tu'), 'Comment Vas Tu')
+assert.strictEqual(jadenCase(''), '')
 // End of tests */

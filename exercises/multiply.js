@@ -19,27 +19,27 @@ function multiply(arg1, arg2){
 		arg1 = Math.abs(arg1);
 		arg2 = Math.abs(arg2);
 		for(let i = 0; i < arg1; i++){
-		resultat += arg2;
+			resultat += arg2;
 		}
 		return resultat;
-	} else {
+	  } else {
 		if (arg1 < 0){
 			arg1 = Math.abs(arg1);
 			for(let i = 0; i < arg1; i++){
 			resultat += arg2;
 			}
 			return -resultat;
-		} else {
+		  } else {
 			arg2 = Math.abs(arg2);
 			for(let i = 0; i < arg1; i++){
 			resultat += arg2;
 			}
 			return -resultat;
-		}
+		   }
 
-	}
+	  }
 
-} 
+   } 
 
 //* Begin of tests
 const assert = require('assert')
